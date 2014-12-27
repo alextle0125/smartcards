@@ -1,0 +1,74 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+$main-font: Tahoma;
+$primary-color: #608391;
+$secondary-color: #a0bad0;
+$primary-accent: #4593b7;
+$secondary-accent: #c4817f;
+$tertiary-accent: #a67973;
+
+.registration {
+	height: 350px;
+	width: 100%;
+	background: #333;
+	padding: 50px;
+}
+
+.registration-text-field {
+	width: 45%;
+	color: $secondary-color;
+}
+
+.registration-login-btn {
+	position: relative;
+	top: 50px;
+	color: #fff;
+	border: 3px solid #fff;
+	border-radius: 25px;
+	padding: 10px;
+	text-decoration: none;
+	text-decoration: none;
+}
+
+.registration-signup-btn {
+	position: relative;
+	top: 50px;
+	height: 65px;
+	width: 150px;
+	background: none;
+	font-size: 30px;
+	color: #fff;
+	border: 3px solid #fff;
+	border-radius: 25px;
+	padding: 10px;
+	text-decoration: none;
+	text-decoration: none;	
+}
+
+#error_explanation h2 {
+	position: relative;
+	top: 50px;
+	font-size: 18px;
+	color: darkred;
+}
+
+#error_explanation ul li {
+	position: relative;
+	top: 50px;
+	font-size: 14px;
+	color: darkred;
+}

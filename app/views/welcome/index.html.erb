@@ -1,0 +1,34 @@
+<div class="logo-back1"></div>
+<div class="logo-back2"></div>
+
+<div class="welcome">
+	<h1 class="logo-text">smartcards</h1>
+	<div class="logo"></div>
+	<%= link_to 'new', new_user_path, :class => "btn btn-signup" %>
+	<%= link_to 'log in',  user_path, :class => "btn btn-signin" %>
+</div>
+
+<div class="welcome-context">
+	<%= image_tag "intro.png", :class => "img-intro" %>
+	<div class="introduction">
+		<span>Learn efficiently. Maximize your retention.</span> smartcards is a flashcard app designed to help you retain information with more accuracy. By processing the results of each smartcard game, tailoring the flashcard distribution, and offering multiple smartcard games to help reinforce your knowledge of the topic and solidify nuances.
+	</div>
+	<div class="instructions">
+		<div class="instruction-partition">
+			<h2 class="instruction-text">Create an Account</h2>
+			<%= image_tag "user.png", :class => "img-user" %>
+		</div>
+		<div class="instruction-partition">
+			<h2 class="instruction-text">Make your Deck</h2>
+			<%= image_tag "questions.png", :class => "img-questions" %>
+		</div>
+		<div class="instruction-partition">
+			<h2 class="instruction-text">Choose your game</h2>
+			<%= image_tag "choices.png", :class => "img-choices" %>
+		</div>
+		<div class="instruction-partition">
+			<h2 class="instruction-text">Track your progress</h2>
+			<%= image_tag "progress.png", :class => "img-progress" %>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,173 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$main-font: Tahoma;
+$primary-color: #608391;
+$secondary-color: #a0bad0;
+$primary-accent: #4593b7;
+$secondary-accent: #c4817f;
+$tertiary-accent: #a67973;
+
+body {
+	width: 100%;
+	margin: 0;
+	font-family: $main-font;
+	font-size: 30px;
+	color: $primary-color;
+}
+
+span {
+	font-weight: bold;
+	color: $primary-accent;
+}
+
+form {
+	position: relative;
+	float: right;
+	right: 200px;
+	text-align: center;
+}
+
+label {
+	font-size: 24px;
+}
+
+input {
+	height: 25px;
+	width: 200px;
+	border: none;
+	border-radius: 5px;
+	font-size: 18px;
+}
+
+.logo-text {
+	position: absolute;
+	left: 55px;
+	font-family: $main-font;
+	font-size: 202px;
+	font-weight: normal;
+	color: #fff;
+}
+
+.logo {
+	position: relative;
+	float: right;
+	top: 45px;
+	right: 45px;
+	height: 287px;
+	width: 301px;
+	background-image: url('logo.png')
+}
+
+.logo-back1 {
+	position: absolute;
+	top: 100px;
+	left: 0;
+	border-top: 500px solid $primary-color;
+	border-right: 400px solid transparent;
+	height: 0;
+	width: 40%;
+}
+
+.logo-back2 {
+	position: absolute;
+	top: 100px;
+	right: 0;
+	border-bottom: 500px solid $secondary-color;
+	border-left: 400px solid transparent;
+	height: 0;
+	width: 40%;
+}
+
+.btn {
+	position: absolute;
+	bottom: 175px;
+	margin: 0 500px 0 500px;
+	padding: 10px;
+	font-family: $main-font;
+	font-size: 72px;
+	color: #fff;
+	border: 3px solid #fff;
+	border-radius: 25px;
+	text-decoration: none;
+}
+
+.btn-signup {
+	position: absolute;
+	left: -300px;
+}
+
+.btn-signin {
+	position: absolute;
+	right: -300px;
+}
+
+.welcome-context {
+	position: relative;
+	top: 700px;
+}
+
+.img-intro {
+	position: relative;
+	float: left;
+}
+
+.img-user {
+	position: relative;
+	display: inline-block;
+	padding: 50px;
+}
+
+.img-questions {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	top: 125px;
+}
+
+.img-choices {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	top: 100px;
+	left: 50px;
+}
+
+.img-progress {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	top: 100px;
+	left: 65px;
+}
+
+.introduction {
+	position: relative;
+	margin: 0 0 0 600px;
+	padding: 75px 75px 75px 0;
+	height: 500px;
+}
+
+.instructions {
+	height: 450px;
+	width: 100%;
+	background: #333;
+}
+
+.instruction-partition {
+	display: inline-block;
+	height: 450px;
+	width: 325px;
+	vertical-align: top;
+}
+
+.instruction-text {
+	position: absolute;
+	bottom: 0;
+	padding: 0px 0 0px 25px;
+	font-family: $main-font;
+	font-size: 32px;
+	font-weight: bold;
+	color: #fff;
+}
