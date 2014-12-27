@@ -1,0 +1,57 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'main';
+
+.registration {
+	height: 350px;
+	width: 100%;
+	background: #333;
+	padding: 50px;
+}
+
+.registration-text-field {
+	width: 45%;
+	color: $secondary-color;
+}
+
+.registration-login-btn {
+	position: relative;
+	top: 50px;
+	color: #fff;
+	border: 3px solid #fff;
+	border-radius: 25px;
+	padding: 10px;
+	text-decoration: none;
+	text-decoration: none;
+}
+
+.registration-signup-btn {
+	position: relative;
+	top: 50px;
+	height: 65px;
+	width: 150px;
+	background: none;
+	font-size: 30px;
+	color: #fff;
+	border: 3px solid #fff;
+	border-radius: 25px;
+	padding: 10px;
+	text-decoration: none;
+	text-decoration: none;	
+}
+
+#error_explanation h2 {
+	position: relative;
+	top: 50px;
+	font-size: 18px;
+	color: darkred;
+}
+
+#error_explanation ul li {
+	position: relative;
+	top: 50px;
+	font-size: 14px;
+	color: darkred;
+}

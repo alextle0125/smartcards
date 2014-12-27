@@ -1,13 +1,8 @@
-// Place all the styles related to the Welcome controller here.
+// Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$main-font: Tahoma;
-$primary-color: #608391;
-$secondary-color: #a0bad0;
-$primary-accent: #4593b7;
-$secondary-accent: #c4817f;
-$tertiary-accent: #a67973;
+@import 'main';
 
 body {
 	width: 100%;
