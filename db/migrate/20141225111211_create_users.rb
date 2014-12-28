@@ -8,5 +8,6 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password_digest
       t.text :progress_scores
       t.timestamps
+    end
   end
 end

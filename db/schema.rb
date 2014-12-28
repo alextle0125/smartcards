@@ -14,31 +14,37 @@
 ActiveRecord::Schema.define(version: 20141225111211) do
 
   create_table "cards", force: true do |t|
+    t.string   "question"
+    t.string   "answer"
+    t.string   "hint",                     null: false
+    t.integer  "num_corr",   default: 0
+    t.integer  "num_shown",  default: 0
+    t.float    "ratio",      default: 0.0
+    t.integer  "deck_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "decks", force: true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.string   "deck_image",  default: "/assets/no-image-provided.png"
+    t.float    "deck_score"
+    t.boolean  "private?",    default: false
+    t.integer  "author_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "username"
+    t.string   "email"
+    t.string   "password_digest"
+    t.text     "progress_scores"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end

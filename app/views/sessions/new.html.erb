@@ -1,0 +1,19 @@
+<h2>Log in</h2>
+
+<div class="registration">
+
+  <%= form_tag "/users/session/create", :class => "session-login-form", method: "POST" do %>
+  	<%= label_tag :username_or_email, "Username or Email", :class => "form-label" %><br>
+  	<%= text_field_tag :username_or_email, nil, :class => "form-input" %><br>
+  	<%= label_tag :password, "Password", :class => "form-label" %><br>
+  	<%= password_field_tag :password, nil, :class => "form-input" %><br>
+  	<%= submit_tag "log in", :class => "session-login-btn" %>
+  <% end %>
+
+  <div class="session-text-field">
+    <h6>smartcards is a flashcard app. Join smartcards to contribute to the smartcard community and compete with other members. smartcards will keep track of your progress and map out your personal growth.</h6> <span>Register for a new smartcard account and start your learning.</span>
+  </div>
+  
+  <%= link_to 'sign up',  new_user_path, :class => "session-login-btn" %>
+
+</div>

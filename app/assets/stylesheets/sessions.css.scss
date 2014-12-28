@@ -1,41 +1,20 @@
-// Place all the styles related to the Users controller here.
+// Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import 'main';
 
-.form-label {
-	font-size: 18px;
-}
-
-.form-input {
-	width: 300px;
-	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
-}
-
-.registration {
-	height: 350px;
-	width: 100%;
-	background: #333;
-	padding: 50px;
-}
-
-.registration-signup-form {
+.session-login-form {
 	position: relative;
-	float: right;
-	top: 60px;
-	height: 300px;
-	width: 450px;
-	text-align: right;
-	color: $primary-accent;
+	top: 100px;
 }
 
-.registration-text-field {
+.session-text-field {
 	width: 650px;
 	color: $secondary-color;
 }
 
-.registration-login-btn {
+.session-signup-btn {
 	position: relative;
 	top: 50px;
 	color: #fff;
@@ -46,11 +25,11 @@
 	text-decoration: none;
 }
 
-.registration-signup-btn {
+.session-login-btn {
 	position: relative;
 	top: 50px;
 	height: 65px;
-	width: 150px;
+	width: 125px;
 	background: none;
 	font-size: 30px;
 	color: #fff;
