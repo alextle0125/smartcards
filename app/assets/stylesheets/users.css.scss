@@ -105,6 +105,8 @@
 	width: 151px;
 	margin: 10px;
 	background-image: url('logo-icon.png');
+	-webkit-filter: drop-shadow(1px 1px 1px #333);
+	-webkit-animation: logo-animate 1s .5s infinite cubic-bezier(0.6, -0.280, 0.735, 0.045);
 }
 
 .user-played-decks {
@@ -116,4 +118,10 @@
 
 .user-deck {
 	border: 1px solid $primary-accent;
+}
+
+@-webkit-keyframes logo-animate {
+	0% { transform: rotateZ(360deg); }
+	50% { transform: scale(1.05,1.05); }
+	100% {transform: scale(1,1); }
 }

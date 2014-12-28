@@ -3,7 +3,7 @@ class CreateCards < ActiveRecord::Migration
     create_table :cards do |t|
       t.string :question
       t.string :answer
-      t.string :hint, :null => false
+      t.string :option, :null => false
       t.integer :num_corr, :default => 0
       t.integer :num_shown, :default => 0
       t.float :ratio, :default => 0
