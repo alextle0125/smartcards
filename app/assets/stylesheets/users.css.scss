@@ -68,3 +68,52 @@
 	text-decoration: none;
 	text-decoration: none;	
 }
+
+.user-info {
+	height: 160px;
+	width: 100%;
+	background: #fff;
+	border-bottom: 1px solid $primary-accent;
+}
+
+.user-credentials {
+	padding: 50px;
+}
+
+.user-credentials-text {
+	margin: 0;
+	font-size: 24px;
+	line-height: 24px;
+	color: $primary-accent;
+}
+
+.user-logout-btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	padding: 10px;
+	text-decoration: none;
+	color: $secondary-color;
+	border: 3px solid $secondary-color;
+	border-radius: 25px;
+}
+
+.user-logo-icon {
+	position: relative;
+	float: left;
+	height: 144px;
+	width: 151px;
+	margin: 10px;
+	background-image: url('logo-icon.png');
+}
+
+.user-played-decks {
+	min-height: 580px;
+	height: 100%;
+	width: 100%;
+	background: #333;
+}
+
+.user-deck {
+	border: 1px solid $primary-accent;
+}

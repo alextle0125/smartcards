@@ -1,4 +1,10 @@
 class UsersController < ApplicationController
+	def show
+		user = User.find(params[:id])
+		@decks = UserDeck.where(user_id: params[:id])
+		render 'show'
+	end
+
 	def new
 		@user = User.new
 	end
@@ -12,8 +18,8 @@ class UsersController < ApplicationController
 			@error = "Username has already been taken"
 			render 'new'
 		elsif @user.save
-			session[:user] = @user
-			redirect_to root_path
+			session[:user] = @user.id
+			redirect_to user_path(@user.id)
 		end
 	end
 

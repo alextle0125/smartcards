@@ -1,0 +1,18 @@
+<% if current_user %>
+	<div class="user-info">
+		<div class="user-logo-icon"></div>
+		<%= link_to 'log out', logout_path, :class => "user-logout-btn" %>
+		<div class="user-credentials">
+			<p class="user-credentials-text"><%= current_user.first_name %> <%= current_user.last_name %></p>
+			<p class="user-credentials-text">Username: <%= current_user.username %></p>
+			<p class="user-credentials-text">Email: <%= current_user.email %></p>
+		</div>
+	</div>
+	<div class="user-played-decks">
+		<% @decks.each do |deck| %>
+			<div class="user-deck">
+				<%= deck %>
+			</div>
+		<% end %>
+	</div>
+<% end %>

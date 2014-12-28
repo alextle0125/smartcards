@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141225111211) do
+ActiveRecord::Schema.define(version: 20141228185756) do
 
   create_table "cards", force: true do |t|
     t.string   "question"
@@ -32,6 +32,13 @@ ActiveRecord::Schema.define(version: 20141225111211) do
     t.float    "deck_score"
     t.boolean  "private?",    default: false
     t.integer  "author_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_decks", force: true do |t|
+    t.integer  "deck_id"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
