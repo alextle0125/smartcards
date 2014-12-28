@@ -14,6 +14,9 @@
   	<%= f.label :password, :class =>"form-label" %>
   	<%= f.password_field :password,  :required => true, :class => "form-input" %><br>
   	<%= f.submit "sign up", :class => "registration-signup-btn" %>
+  	<% if @error %>
+    	<p class="registration-errors"><%= @error %></p>
+  	<% end %>
   <% end %>
 
   <div class="registration-text-field">

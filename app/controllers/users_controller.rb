@@ -5,11 +5,15 @@ class UsersController < ApplicationController
 
 	def create
 		@user = User.new(user_params)
-		if @user.save
+		if User.find_by_email(params[:user][:email])
+			@error = "Email has already been taken"
+			render 'new'
+		elsif User.find_by_username(params[:user][:username])
+			@error = "Username has already been taken"
+			render 'new'
+		elsif @user.save
 			session[:user] = @user
 			redirect_to root_path
-		else
-			render 'new'
 		end
 	end
 

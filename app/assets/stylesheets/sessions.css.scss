@@ -4,9 +4,25 @@
 
 @import 'main';
 
+.sessions {
+	height: 350px;
+	width: 100%;
+	background: #333;
+	padding: 50px;
+}
+
+.sessions-errors {
+	position: relative;
+	top: 100px;
+	text-align: center;
+	font-size: 18px;
+	color: darkred;
+}
+
 .session-login-form {
 	position: relative;
 	top: 100px;
+	color: #4593b7;
 }
 
 .session-text-field {

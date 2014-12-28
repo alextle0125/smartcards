@@ -9,8 +9,12 @@ class SessionsController < ApplicationController
 		if @user && @user.authenticate(params[:password])
 			session[:user] = @user
 			redirect_to root_path
+		elsif @user
+			@error = "Incorrect password"
+			render 'new'
 		else
-			redirect_to login_path
+			@error = "Invalid username or email"
+			render 'new'
 		end
 	end
 end
