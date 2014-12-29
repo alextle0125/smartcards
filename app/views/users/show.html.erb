@@ -7,6 +7,11 @@
 			<p class="user-credentials-text">Username: <%= current_user.username %></p>
 			<p class="user-credentials-text">Email: <%= current_user.email %></p>
 		</div>
+		<ul class="user-options">
+			<li class='user-options-item'><%= link_to 'new deck', new_deck_path, :class => 'user-options-item' %></li>
+			<li class='user-options-item'><%= link_to 'edit account', edit_deck_path, :class => 'user-options-item' %></li>
+			<li class='user-options-item'><%= link_to 'delete account', user_path(current_user.id), :class => 'user-options-item', method: :delete, data: { confirm: "Are you sure you want to permanently delete your account? We will miss you." } %></li>
+		</ul>
 	</div>
 	<div class="user-played-decks">
 		<% @decks.each do |deck| %>
