@@ -23,6 +23,10 @@ class UsersController < ApplicationController
 		end
 	end
 
+	def destroy
+		# <%= link_to 'delete account', user_path(current_user.id), :class => 'user-options-item', method: :delete, data: { confirm: "Are you sure you want to permanently delete your account? We will miss you." } %>
+	end
+
 	private
 
 		def user_params
