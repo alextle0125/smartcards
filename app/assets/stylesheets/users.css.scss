@@ -107,7 +107,9 @@
 	margin: 10px;
 	background-image: url('logo-icon.png');
 	-webkit-filter: drop-shadow(1px 1px 1px #333);
+	filter: drop-shadow(1px 1px 1px #333);
 	-webkit-animation: logo-animate 1s .5s infinite cubic-bezier(0.6, -0.280, 0.735, 0.045);
+	animation: logo-animate 1s .5s infinite cubic-bezier(0.6, -0.280, 0.735, 0.045);
 }
 
 .user-options {
@@ -119,11 +121,11 @@
 
 .user-options-item {
 	position: relative;
-	top: -25px;
 	right: 5px;
 	text-decoration: none;
 	list-style-type: none;
-	color: #626262;
+	color: #fff;
+	opacity: 0.1;
 }
 
 .user-gear {
@@ -134,6 +136,11 @@
 	width: 160px;
 	background-image: url('settings.png');
 	cursor: pointer;
+}
+
+.user-gear:hover {
+	-webkit-animation: gear-spin 1s 0s infinite cubic-bezier(0.6, -0.280, 0.735, 0.045);
+	animation: gear-spin 1s 0s infinite cubic-bezier(0.6, -0.280, 0.735, 0.045);
 }
 
 .user-played-decks {
@@ -148,7 +155,11 @@
 }
 
 @-webkit-keyframes logo-animate {
-	0% { transform: rotateZ(360deg); }
 	50% { transform: scale(1.05,1.05); }
 	100% {transform: scale(1,1); }
+}
+
+@-webkit-keyframes gear-spin {
+	50% { transform: rotateZ(0deg); }
+	100% {transform: rotateZ(360deg); }
 }
