@@ -1,0 +1,19 @@
+// Place all the styles related to the Decks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@import 'main';
+
+.decks-background {
+	height: 350px;
+	width: 100%;
+	background: #333;
+	padding: 50px;
+}
+
+.decks-image {
+	height: 419px;
+	width: 532px;
+	background-image: url('cards.png');
+}

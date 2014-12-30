@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email
       t.string :password_digest
       t.text :progress_scores
+      t.boolean :first_time?, :default => true
       t.timestamps
     end
   end

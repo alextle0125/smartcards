@@ -119,13 +119,17 @@
 	text-align: right;
 }
 
-.user-options-item {
+li.user-options-item {
+	right: 5px;
+	list-style-type: none;
+}
+
+a.user-options-item {
 	position: relative;
 	right: 5px;
 	text-decoration: none;
-	list-style-type: none;
-	color: #fff;
-	opacity: 0.1;
+	color: #626262;
+	opacity: 0;
 }
 
 .user-gear {
@@ -139,8 +143,8 @@
 }
 
 .user-gear:hover {
-	-webkit-animation: gear-spin 1s 0s infinite cubic-bezier(0.6, -0.280, 0.735, 0.045);
-	animation: gear-spin 1s 0s infinite cubic-bezier(0.6, -0.280, 0.735, 0.045);
+	-webkit-animation: gear-spin 2s 0s infinite cubic-bezier(0.6, -0.280, 0.735, 0.045);
+	animation: gear-spin 2s 0s infinite cubic-bezier(0.6, -0.280, 0.735, 0.045);
 }
 
 .user-played-decks {
