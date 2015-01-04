@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   resources :decks
 
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

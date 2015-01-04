@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20141228185756) do
   create_table "cards", force: true do |t|
     t.string   "question"
     t.string   "answer"
-    t.string   "hint",                     null: false
+    t.string   "option",                   null: false
     t.integer  "num_corr",   default: 0
     t.integer  "num_shown",  default: 0
     t.float    "ratio",      default: 0.0
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20141228185756) do
     t.string   "email"
     t.string   "password_digest"
     t.text     "progress_scores"
+    t.boolean  "first_time?",     default: true
     t.datetime "created_at"
     t.datetime "updated_at"
   end
