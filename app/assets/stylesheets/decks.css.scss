@@ -5,8 +5,13 @@
 
 @import 'main';
 
+.decks-instructions {
+	font-size: 14px;
+	margin: 0 0 10px 50px;
+}
+
 .decks-background {
-	height: 350px;
+	height: 400px;
 	width: 100%;
 	background: #333;
 	padding: 50px;
@@ -16,4 +21,31 @@
 	height: 419px;
 	width: 532px;
 	background-image: url('cards.png');
+}
+
+.decks-form-upload {
+	position: relative;
+	float: left;
+	left: 200px;
+}
+
+.new_deck {
+	height: 350px;
+	text-align: left;
+}
+
+.upload-form-label {
+	font-size: 12px;
+	color: $primary-color;
+}
+
+#deck_deck_image {
+	font-size: 10px;
+	color: $secondary-color;
+
+}
+
+#deck_deck {
+	font-size: 10px;
+	color: $secondary-color;
 }

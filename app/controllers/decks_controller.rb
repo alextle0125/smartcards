@@ -1,10 +1,10 @@
 class DecksController < ApplicationController
-	def new
+	def new_upload
 		@deck = Deck.new
-		render 'new'
+		render 'upload'
 	end
 
-	def create
+	def upload
 		upload = File.readlines(params[:deck][:deck].tempfile)
 		deck = Deck.create(title: params[:deck][:title], description: params[:deck][:description], private?: params[:deck][:private], author: User.find(session[:user]))
 		card_set = []

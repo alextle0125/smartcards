@@ -13,6 +13,9 @@ Rails.application.routes.draw do
 
   resources :decks
 
+  get 'decks/upload/new' => 'decks#new_upload', as: :upload
+  post 'decks/upload/create' => 'decks#upload'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

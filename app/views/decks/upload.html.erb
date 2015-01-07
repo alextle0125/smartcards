@@ -1,0 +1,25 @@
+<h2>Upload Deck</h2>
+<p class="decks-instructions">You can upload a deck using a CSV file or Excel spreadsheet. The format is:</p>
+<ol class="decks-instructions">
+	<li>Column 1 - Question</li>
+	<li>Column 2 - Answer</li>
+	<li>Column 3 - Option (use the option slot for hints or to create dynamic multi-use playing decks.</li>
+</ol>
+
+<div class="decks-background">
+  <div class="decks-form-upload">
+	  <%= form_for @deck do |f| %>
+	  	<%= f.label :title, :class =>"upload-form-label" %><br>
+	  	<%= f.text_field :title, :required => true %><br>
+	  	<%= f.label :description, :class =>"upload-form-label" %><br>
+	  	<%= f.text_area :description, :size => "60x12", :required => true  %><br>
+	  	<%= f.label :deck_image, :class =>"upload-form-label" %>
+	  	<%= f.file_field :deck_image, :accept => "image/*" %>
+	  	<%= f.label :deck_upload, :class =>"upload-form-label" %>
+	  	<%= f.file_field :deck, :accept => "text/csv" %>
+	  	<%= f.label :make_your_deck_private, :class =>"upload-form-label" %>
+	  	<%= f.select :private?, [['Public', 1], ['Private', 2]] %><br>
+	  	<%= f.submit "Upload Deck" %>
+	  <% end %>
+  </div>
+</div>
