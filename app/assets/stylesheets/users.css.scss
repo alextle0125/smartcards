@@ -188,6 +188,11 @@ a.user-options-item {
 	background: #fff;	
 }
 
+.deck-modal-text-field {
+	width: 425px;
+	border: 1px solid #666;
+}
+
 @-webkit-keyframes logo-animate {
 	50% { transform: scale(1.05,1.05); }
 	100% {transform: scale(1,1); }

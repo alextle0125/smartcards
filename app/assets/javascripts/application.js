@@ -14,3 +14,15 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+	modalScreen = $("div.modal-screen");
+	newDeckForm = $("div.user-deck-modal");
+
+	console.log(newDeckForm)
+
+	modalScreen.click(function(event){
+		modalScreen.css('visibility', 'hidden');
+		newDeckForm.css('visibility', 'hidden');
+	});
+});
