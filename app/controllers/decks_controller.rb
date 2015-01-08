@@ -1,4 +1,14 @@
 class DecksController < ApplicationController
+
+	def new
+		@deck = Deck.new
+		render 'new'
+	end
+
+	def create
+
+	end
+
 	def new_upload
 		@deck = Deck.new
 		render 'upload'

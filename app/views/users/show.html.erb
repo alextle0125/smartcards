@@ -21,4 +21,17 @@
 		<li class='user-options-item'><%= link_to 'preferences', edit_user_path, :class => 'user-options-item' %></li>
 		<div class="user-gear"></div>
 	</ul>
+	<div class="modal-screen"></div>
+	<div class="user-deck-modal">
+		<%= form_for @deck do |f| %>
+		<%= f.label :title, :class =>"upload-form-label" %><br>
+	  	<%= f.text_field :title, :required => true %><br>
+	  	<%= f.label :description, :class =>"upload-form-label" %><br>
+	  	<%= f.text_area :description, :size => "60x12", :required => true  %><br>
+	  	<%= f.label :deck_image, :class =>"upload-form-label" %>
+	  	<%= f.file_field :deck_image, :accept => "image/*" %>
+	  	<%= f.label :make_your_deck_private, :class =>"upload-form-label" %>
+	  	<%= f.select :private?, [['Public', 1], ['Private', 2]] %><br>
+		<% end %>
+	</div>
 <% end %>

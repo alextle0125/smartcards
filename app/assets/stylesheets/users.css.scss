@@ -170,6 +170,24 @@ a.user-options-item {
 	border: 1px solid $primary-accent;
 }
 
+.modal-screen {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 740px;
+	width: 100%;
+	background: rgba(0,0,0,0.7);
+}
+
+.user-deck-modal {
+	position: absolute;
+	top: 30%;
+	left: 23%;
+	height: 400px;
+	width: 700px; 
+	background: #fff;	
+}
+
 @-webkit-keyframes logo-animate {
 	50% { transform: scale(1.05,1.05); }
 	100% {transform: scale(1,1); }

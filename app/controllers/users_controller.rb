@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 	def show
 		user = User.find(params[:id])
+		@deck = Deck.new
 		@decks = UserDeck.where(user_id: params[:id])
 		render 'show'
 	end
