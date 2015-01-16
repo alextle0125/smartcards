@@ -16,6 +16,7 @@ class DecksController < ApplicationController
 	def upload
 		upload = File.readlines(params[:deck][:deck].tempfile)
 		deck = Deck.create(title: params[:deck][:title], description: params[:deck][:description], private?: params[:deck][:private], author: User.find(session[:user]))
+		UserDeck.create(user_id: session[:user], deck_id: deck.id)
 		card_set = []
 		upload.each do |line| 
 			card_set << line.split(",") 
