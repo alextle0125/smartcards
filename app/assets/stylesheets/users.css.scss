@@ -97,6 +97,7 @@
 	background: #333;
 	border: 3px ridge $secondary-color;
 	border-radius: 25px;
+	cursor: pointer;
 }
 
 .user-upload-deck {
@@ -125,15 +126,16 @@
 }
 
 .user-options {
-	position: fixed;
-	bottom: 100px;
-	right: 0;
-	text-align: right;
+	position: relative;
+	float: right;
 }
 
-li.user-options-item {
-	right: 5px;
+.user-options-item {
+	display: inline-block;
 	list-style-type: none;
+	background: #fff;
+	padding: 5px 0px 0px 5px;
+	font-size: 18px;
 }
 
 a.user-options-item {
@@ -141,22 +143,6 @@ a.user-options-item {
 	right: 5px;
 	text-decoration: none;
 	color: #626262;
-	opacity: 0;
-}
-
-.user-gear {
-	position: absolute;
-	bottom: -125px;
-	right: 0;
-	height: 160px;
-	width: 160px;
-	background-image: url('settings.png');
-	cursor: pointer;
-}
-
-.user-gear:hover {
-	-webkit-animation: gear-spin 2s 0s infinite cubic-bezier(0.6, -0.280, 0.735, 0.045);
-	animation: gear-spin 2s 0s infinite cubic-bezier(0.6, -0.280, 0.735, 0.045);
 }
 
 .user-played-decks {
@@ -177,6 +163,7 @@ a.user-options-item {
 	height: 740px;
 	width: 100%;
 	background: rgba(0,0,0,0.7);
+	visibility: hidden;
 }
 
 .user-deck-modal {
@@ -185,7 +172,8 @@ a.user-options-item {
 	left: 23%;
 	height: 400px;
 	width: 700px; 
-	background: #fff;	
+	background: #fff;
+	visibility: hidden;
 }
 
 .deck-modal-text-field {

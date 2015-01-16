@@ -1,12 +1,11 @@
 class DecksController < ApplicationController
 
-	def new
-		@deck = Deck.new
-		render 'new'
-	end
-
 	def create
-
+		@deck = Deck.new(deck_params)
+		if @deck.save
+			UserDeck.create(user_id: session[:user], deck_id: @deck.id)
+			redirect_to user_path(session[:user])
+		end
 	end
 
 	def new_upload

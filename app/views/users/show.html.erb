@@ -5,8 +5,12 @@
 			<p class="user-credentials-text"><%= current_user.first_name %> <%= current_user.last_name %></p>
 			<p class="user-credentials-text">Username: <%= current_user.username %></p>
 			<p class="user-credentials-text">Email: <%= current_user.email %></p>
+			<ul class="user-options">
+				<li class='user-options-item'><%= link_to 'user preferences', edit_user_path(current_user), :class => 'user-options-item' %></li>
+				<li class='user-options-item'><%= link_to 'log out', logout_path, :class => "user-options-item" %></li>
+			</ul>
 		</div>
-		<%= link_to 'new deck', new_deck_path, :class => 'user-new-deck' %>
+		<div class='user-new-deck'>new deck</div>
 		<%= link_to 'upload deck', upload_path, :class => 'user-upload-deck' %>
 	</div>
 	<div class="user-played-decks">
@@ -16,11 +20,6 @@
 			</div>
 		<% end %>
 	</div>
-	<ul class="user-options">
-		<li class='user-options-item'><%= link_to 'log out', logout_path, :class => "user-options-item" %></li>
-		<li class='user-options-item'><%= link_to 'preferences', edit_user_path, :class => 'user-options-item' %></li>
-		<div class="user-gear"></div>
-	</ul>
 	<div class="modal-screen"></div>
 	<div class="user-deck-modal">
 		<%= form_for @deck do |f| %>

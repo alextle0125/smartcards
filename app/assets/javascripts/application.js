@@ -16,13 +16,23 @@
 //= require_tree .
 
 $(document).ready(function(){
+	newDeckButton = $("div.user-new-deck");
 	modalScreen = $("div.modal-screen");
 	newDeckForm = $("div.user-deck-modal");
 
-	console.log(newDeckForm)
+	newDeckButton.click(function(event){
+		modalScreen.css('visibility', 'visible');
+		newDeckForm.css('visibility', 'visible');
 
-	modalScreen.click(function(event){
-		modalScreen.css('visibility', 'hidden');
-		newDeckForm.css('visibility', 'hidden');
+		modalScreen.click(function(event){
+			modalScreen.css('visibility', 'hidden');
+			newDeckForm.css('visibility', 'hidden');
+		});
 	});
+});
+
+$(document).ready(function(){
+	
+
+	
 });
